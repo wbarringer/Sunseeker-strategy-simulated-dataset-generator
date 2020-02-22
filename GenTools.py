@@ -21,4 +21,5 @@ def write_database(server, database, table, data):
                                 "Trusted_Connection=yes;")
     cursor = connection.cursor()
     print("Connected")
-    cursor.execute("INSERT INTO " + database + ".dbo." + table, data)
+    cursor.execute("INSERT INTO " + database + ".dbo." + table +
+                   " (Time, Array_Power, Array_Voltage, Array_Current) VALUES ", str(data))
