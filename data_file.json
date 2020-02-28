@@ -1,0 +1,68 @@
+{
+  "0": {
+    "Battery Voltage": 125.69999999999999,
+    "Battery Current": 0,
+    "High Cell": 3.65,
+    "Low Cell": 3.55
+  },
+  "30": {
+    "Battery Voltage": 125.69999999999999,
+    "Battery Current": 0,
+    "High Cell": 3.65,
+    "Low Cell": 3.55
+  },
+  "60": {
+    "Battery Voltage": 125.69999999999999,
+    "Battery Current": 0,
+    "High Cell": 3.65,
+    "Low Cell": 3.55
+  },
+  "90": {
+    "Battery Voltage": 125.69999999999999,
+    "Battery Current": 0,
+    "High Cell": 3.65,
+    "Low Cell": 3.55
+  },
+  "120": {
+    "Battery Voltage": 125.69999999999999,
+    "Battery Current": 0,
+    "High Cell": 3.65,
+    "Low Cell": 3.55
+  },
+  "150": {
+    "Battery Voltage": 125.69999999999999,
+    "Battery Current": 0,
+    "High Cell": 3.65,
+    "Low Cell": 3.55
+  },
+  "180": {
+    "Battery Voltage": 125.69999999999999,
+    "Battery Current": 0,
+    "High Cell": 3.65,
+    "Low Cell": 3.55
+  },
+  "210": {
+    "Battery Voltage": 125.69999999999999,
+    "Battery Current": 0,
+    "High Cell": 3.65,
+    "Low Cell": 3.55
+  },
+  "240": {
+    "Battery Voltage": 125.69999999999999,
+    "Battery Current": 0,
+    "High Cell": 3.65,
+    "Low Cell": 3.55
+  },
+  "270": {
+    "Battery Voltage": 125.69999999999999,
+    "Battery Current": 0,
+    "High Cell": 3.65,
+    "Low Cell": 3.55
+  },
+  "300": {
+    "Battery Voltage": 125.69999999999999,
+    "Battery Current": 0,
+    "High Cell": 3.65,
+    "Low Cell": 3.55
+  }
+}
