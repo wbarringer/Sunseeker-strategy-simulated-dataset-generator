@@ -1,9 +1,8 @@
 # Tools for generating a simulation dataset that can be used to test and train strategy software
 
-# import random
-import pyodbc
 import json
 import random
+import math
 
 
 class Array:
@@ -30,7 +29,7 @@ class Battery:
         self.parallel = parallel
         self.cells = []
         self.total_voltage = 0
-        self.current = 0
+        self.current = 0.001
         self.max_current = parallel * max_i
         self.min_current = parallel * min_i
         self.high_cell = 0
@@ -44,11 +43,11 @@ class Battery:
         self.update_total_voltage()
         self.update_min_max()
 
-        print("Battery created")
-        print("Calculated values: ")
-        print("Cell count: " + str(series * parallel))
-        print("Total Capacity: " + str(self.total_capacity) + " Whr")
-        print("Internal Resistance: " + str(self.internal_resistance) + " ohms")
+        # print("Battery created")
+        # print("Calculated values: ")
+        # print("Cell count: " + str(series * parallel))
+        # print("Total Capacity: " + str(self.total_capacity) + " Whr")
+        # print("Internal Resistance: " + str(round(self.internal_resistance, 6)) + " ohms")
 
     def create_cell_values(self, nom_v):
         i = 0
@@ -56,15 +55,17 @@ class Battery:
             i += 1
             n = random.randint(1, 10)
             if n <= 3:
-                self.cells.append(round(nom_v - 0.05, 2))
+                self.cells.append(round(nom_v - 0.01 * random.randint(1, 5), 2))
             elif 3 < n <= 7:
                 self.cells.append(nom_v)
             elif n > 7:
-                self.cells.append(round(nom_v + 0.05, 2))
+                self.cells.append(round(nom_v + 0.01 * random.randint(1, 5), 2))
 
     def update_total_voltage(self):
+        self.total_voltage = 0
         for i in self.cells:
             self.total_voltage += i
+        print(self.total_voltage)
 
     def update_min_max(self):
         self.high_cell = max(self.cells)
@@ -73,6 +74,8 @@ class Battery:
     def update_cell_voltages(self, dv):
         for i in self.cells:
             i -= dv
+        self.update_total_voltage()
+        self.update_min_max()
 
     def calculate_resistance_drop(self, current=0):
         # Calculates the voltage drop due to the internal resistance at high current
@@ -85,7 +88,7 @@ class Battery:
 class Sun:
 
     def __init__(self):
-        self.irradiance = 1000
+        self.irradiance = 1000  # Solar irradiance in W/m^2
         self.status = "Clear"  # TODO add additional weather effects
 
 
@@ -93,8 +96,9 @@ class Motor:
 
     def __init__(self, mass, efficiency=0.95):
         self.efficiency = efficiency
-        self.mass = mass  # Mass of the car in Kgs
-        self.velocity = 0  # Velocity of car in m/s
+        self.mass = mass  # Mass of the car in lbs
+        self.velocity = 0  # Velocity of car in ft/s
+        self.acceleration = 0  # Acceleration of car in ft/s^2
 
 
 class DataGenerator:
@@ -109,17 +113,22 @@ class DataGenerator:
         self.Motor = motor  # Motor object used in simulation
         self.inst_array_power = self.Array.area * self.Array.efficiency * self.Sun.irradiance
         self.data = {}
+        self.route = {}
+        self.route_step = 0
+        self.final_step = 0
+        self.distance_traveled = 0  # Distance traveled by car in ft
+        self.route_distance = 0  # Route length up tp the current route step
 
         print("Simulator ready")
 
-    def run(self):
+    def run_time_based(self):
         last_save = 0
         while self.current_time < self.sim_time * 60 + 1:  # while the simulation has not run to the specified time
             print("running at time: " + str(self.current_time))
             current_data = {
                 "Battery Voltage": self.Battery.total_voltage,
                 "Battery Current": self.Battery.current,
-                # "Cell Voltages" : self.Battery.cells
+                "Cell Voltages" : self.Battery.cells,
                 "High Cell": self.Battery.high_cell,
                 "Low Cell": self.Battery.low_cell
             }
@@ -127,6 +136,36 @@ class DataGenerator:
             if self.current_time - last_save >= 300:  # Save data every 5 simulated minutes
                 write_data(self.data)
             self.current_time += self.time_step  # Increment simulation clock
+
+    def run_route_based(self, route_file):
+        last_save = 0
+        with open(route_file) as file_object:
+            self.route = json.load(file_object)
+        self.final_step = int(max(self.route.keys()))
+        while self.route_step <= self.final_step:
+            # print(str(self.current_time) + " seconds")
+            # print("Step " + str(self.route_step))
+            # print(str(self.distance_traveled) + " feet")
+            if self.distance_traveled - int(self.route[str(self.route_step)]["Distance"]) >= self.route_distance:
+                self.route_distance += int(self.route[str(self.route_step)]["Distance"]) * 5280
+                self.route_step += 1
+                print(self.route_step)
+                if self.route_step > self.final_step:
+                    break
+            if self.Motor.velocity / 0.681818 < int(self.route[str(self.route_step)]["Speed_Limit"]):
+                self.accelerate()
+            if self.Motor.velocity / 0.681818 > int(self.route[str(self.route_step)]["Speed_Limit"]):
+                self.Motor.acceleration = -0.5  # Placeholder constant deceleration when above speed limit
+            self.update_position()
+            # self.Battery.update_cell_voltages(
+            #     self.calculate_voltage_change(
+            #         self.calculate_energy()) / self.Battery.series)
+            # print(self.calculate_energy())
+            self.update_log()
+            if self.current_time - last_save >= 300:  # Save data every 5 simulated minutes
+                write_data(self.data)
+                last_save = self.current_time
+            self.current_time += self.time_step
 
     def calculate_energy(self):
         energy = self.time_step * self.Battery.total_voltage * self.Battery.current
@@ -136,25 +175,42 @@ class DataGenerator:
         dv = energy / (self.Battery.current * self.time_step)
         return dv
 
-    def accelerate(self, target):
-        starting_energy = 0.5 * self.Motor.mass * self.Motor.velocity * self.Motor.velocity
-        ending_energy = 0.5 * self.Motor.mass * target * target
-        energy_change = ending_energy - starting_energy
+    def update_position(self):
+        dx = self.time_step * self.Motor.velocity + 0.5 * self.Motor.acceleration * self.time_step * self.time_step
+        self.distance_traveled += dx
+
+    def update_velocity(self):
+        dv = self.time_step * self.Motor.acceleration
+        self.Motor.velocity += dv
+
+    def accelerate(self):
+        power = 25 * self.Battery.calculate_resistance_drop(25) + self.inst_array_power
         max_power = self.Battery.max_current * self.Battery.total_voltage - (
                     self.Battery.calculate_resistance_drop(self.Battery.max_current)
-                    )
-        time_required = energy_change / max_power
-        print(time_required)
-# def write_database(server, database, table, data):
-#     print("attempting to connect")
-#     connection = pyodbc.connect("Driver={SQL Server};"
-#                                 "Server=" + server + ";"
-#                                 "Database=" + database + ";"
-#                                 "Trusted_Connection=yes;")
-#     cursor = connection.cursor()
-#     print("Connected")
-#     cursor.execute("INSERT INTO " + database + ".dbo." + table +
-#                    " (Time, Array_Power, Array_Voltage, Array_Current) VALUES ", str(data))
+                    ) + self.inst_array_power
+        self.Battery.current = 25
+        print(self.Battery.calculate_resistance_drop(25) / self.Battery.series)
+        self.Battery.update_cell_voltages(self.Battery.calculate_resistance_drop(25) / self.Battery.series)
+        # self.Battery.current = (max_power - self.inst_array_power) / self.Battery.total_voltage
+        self.Motor.acceleration = math.sqrt((power * self.Motor.efficiency) / (2 * self.Motor.mass * self.time_step))
+
+    # def regen(self):
+
+    # def hold(self):
+    #     constant_power =
+
+    def update_log(self):
+        current_data = {
+            "Battery Voltage": self.Battery.total_voltage,
+            "Battery Current": self.Battery.current,
+            # "Cell Voltages" : self.Battery.cells
+            "High Cell": self.Battery.high_cell,
+            "Low Cell": self.Battery.low_cell,
+            "Distance traveled" : self.distance_traveled,
+            "Velocity" : self.Motor.velocity,
+            "Acceleration" : self.Motor.acceleration
+        }
+        self.data[self.current_time] = current_data  # Add data at current time to data log
 
 
 def write_data(data):

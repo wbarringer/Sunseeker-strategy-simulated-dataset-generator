@@ -1,68 +1,641 @@
 {
   "0": {
-    "Battery Voltage": 125.69999999999999,
-    "Battery Current": 0,
-    "High Cell": 3.65,
-    "Low Cell": 3.55
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 667.4538193796363,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
   },
   "30": {
-    "Battery Voltage": 125.69999999999999,
-    "Battery Current": 0,
-    "High Cell": 3.65,
-    "Low Cell": 3.55
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 1334.9076387592727,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
   },
   "60": {
-    "Battery Voltage": 125.69999999999999,
-    "Battery Current": 0,
-    "High Cell": 3.65,
-    "Low Cell": 3.55
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 2002.361458138909,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
   },
   "90": {
-    "Battery Voltage": 125.69999999999999,
-    "Battery Current": 0,
-    "High Cell": 3.65,
-    "Low Cell": 3.55
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 2669.8152775185454,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
   },
   "120": {
-    "Battery Voltage": 125.69999999999999,
-    "Battery Current": 0,
-    "High Cell": 3.65,
-    "Low Cell": 3.55
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 3337.2690968981815,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
   },
   "150": {
-    "Battery Voltage": 125.69999999999999,
-    "Battery Current": 0,
-    "High Cell": 3.65,
-    "Low Cell": 3.55
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 4004.7229162778176,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
   },
   "180": {
-    "Battery Voltage": 125.69999999999999,
-    "Battery Current": 0,
-    "High Cell": 3.65,
-    "Low Cell": 3.55
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 4672.176735657454,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
   },
   "210": {
-    "Battery Voltage": 125.69999999999999,
-    "Battery Current": 0,
-    "High Cell": 3.65,
-    "Low Cell": 3.55
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 5339.63055503709,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
   },
   "240": {
-    "Battery Voltage": 125.69999999999999,
-    "Battery Current": 0,
-    "High Cell": 3.65,
-    "Low Cell": 3.55
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 6007.084374416726,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
   },
   "270": {
-    "Battery Voltage": 125.69999999999999,
-    "Battery Current": 0,
-    "High Cell": 3.65,
-    "Low Cell": 3.55
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 6674.538193796362,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
   },
   "300": {
-    "Battery Voltage": 125.69999999999999,
-    "Battery Current": 0,
-    "High Cell": 3.65,
-    "Low Cell": 3.55
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 7341.992013175998,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "330": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 8009.445832555634,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "360": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 8676.899651935271,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "390": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 9344.353471314907,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "420": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 10011.807290694544,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "450": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 10679.26111007418,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "480": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 11346.714929453816,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "510": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 12014.168748833452,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "540": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 12681.622568213088,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "570": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 13349.076387592724,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "600": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 14016.53020697236,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "630": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 14683.984026351996,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "660": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 15351.437845731632,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "690": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 16018.891665111269,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "720": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 16686.345484490907,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "750": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 17353.799303870543,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "780": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 18021.25312325018,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "810": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 18688.706942629815,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "840": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 19356.16076200945,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "870": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 20023.614581389087,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "900": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 20691.068400768723,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "930": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 21358.52222014836,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "960": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 22025.976039527995,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "990": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 22693.42985890763,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1020": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 23360.883678287268,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1050": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 24028.337497666904,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1080": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 24695.79131704654,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1110": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 25363.245136426176,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1140": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 26030.698955805812,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1170": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 26698.15277518545,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1200": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 27365.606594565084,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1230": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 28033.06041394472,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1260": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 28700.514233324357,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1290": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 29367.968052703993,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1320": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 30035.42187208363,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1350": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 30702.875691463265,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1380": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 31370.3295108429,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1410": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 32037.783330222537,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1440": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 32705.237149602173,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1470": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 33372.69096898181,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1500": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 34040.14478836145,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1530": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 34707.59860774109,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1560": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 35375.05242712073,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1590": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 36042.50624650037,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1620": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 36709.96006588001,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1650": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 37377.41388525965,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1680": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 38044.86770463929,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1710": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 38712.32152401893,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1740": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 39379.77534339857,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1770": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 40047.22916277821,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1800": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 40714.68298215785,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1830": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 41382.13680153749,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1860": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 42049.59062091713,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1890": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 42717.04444029677,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1920": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 43384.49825967641,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1950": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 44051.95207905605,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "1980": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 44719.40589843569,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "2010": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 45386.85971781533,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "2040": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 46054.31353719497,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "2070": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 46721.76735657461,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
+  },
+  "2100": {
+    "Battery Voltage": 125.89999999999993,
+    "Battery Current": 25,
+    "High Cell": 3.64,
+    "Low Cell": 3.55,
+    "Distance traveled": 47389.22117595425,
+    "Velocity": 0,
+    "Acceleration": 1.4832307097325252
   }
 }

@@ -25,3 +25,16 @@ if __name__ == '__main__':
     #                 ('12:15:20', '615', '123', '5')
     #                 """)
     conn.commit()
+
+
+# def write_database(server, database, table, data):
+#     print("attempting to connect")
+#     connection = pyodbc.connect("Driver={SQL Server};"
+#                                 "Server=" + server + ";"
+#                                 "Database=" + database + ";"
+#                                 "Trusted_Connection=yes;")
+#     cursor = connection.cursor()
+#     print("Connected")
+#     cursor.execute("INSERT INTO " + database + ".dbo." + table +
+#                    " (Time, Array_Power, Array_Voltage, Array_Current) VALUES ", str(data))
+

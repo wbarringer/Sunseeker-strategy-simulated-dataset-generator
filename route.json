@@ -1,0 +1,31 @@
+{
+  "-1" :{
+    "Key" : "This entry serves as a key for the purpose and units for each term",
+    "Distance" : "Length of this route step in miles",
+    "Speed_Limit" : "Speed limit in mph"
+  },
+  "0" : {
+    "Distance" : "1",
+    "Speed_Limit" : "25"
+  },
+  "1" : {
+    "Distance" : "2",
+    "Speed_Limit" : "35"
+  },
+  "2" : {
+    "Distance" : "1",
+    "Speed_Limit" : "45"
+  },
+  "3" : {
+    "Distance" : "4",
+    "Speed_Limit" : "35"
+  },
+  "4" : {
+    "Distance" : "2",
+    "Speed_Limit" : "25"
+  },
+  "5" : {
+    "Distance" : "1",
+    "Speed_Limit" : "15"
+  }
+}
