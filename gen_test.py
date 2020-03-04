@@ -4,11 +4,9 @@ import GenTools
 
 mass = 700  # Mass of the car in lbs
 
-Array = GenTools.Array()
-Battery = GenTools.Battery(35, 12, 3300)
-Sun = GenTools.Sun()
-Motor = GenTools.Motor(mass)
-sim = GenTools.DataGenerator(Array, Battery, Sun, Motor, sim_time=5)
+sim = GenTools.DataGenerator(sim_time=5, logging=False)
 
 sim.run_route_based("route.json")
+print(sim.Battery.high_cell)
+print(sim.Battery.low_cell)
 # sim.run()
