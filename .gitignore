@@ -2,3 +2,5 @@
 *.xml
 *.iml
 __pycache__/GenTools.cpython-38.pyc
+*.pyc
+venv\*
